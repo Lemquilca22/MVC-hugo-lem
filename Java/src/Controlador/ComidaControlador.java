@@ -14,5 +14,15 @@ public class ComidaControlador {
 
     public void iniciar(){
         vista.mostrarMensaje("Registro de comida y bebida");
+
+        String nombre = vista.pedirComida();
+        String tamanio = vista.pedirTamanio();
+        String bebida = vista.pedirBebida();
+        String tamanioBebida= vista.pedirtamioBebida();
+        Comida comida = new Comida(nombre,tamanio,bebida,tamanioBebida);
+        ComidaVista.mostrarComida(comida);
+
     }
+
+
 }
