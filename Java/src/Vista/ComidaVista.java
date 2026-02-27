@@ -24,7 +24,7 @@ public class ComidaVista {
         return scanner.nextLine();
     }
 
-    public void mostrarComida(Comida comida1){
+    public static void mostrarComida(Comida comida1){
         System.out.println("\n---Datos de la orden---");
         System.out.println("Hamburguesa: "+comida1.getNombre());
         System.out.println("Tamaño: "+comida1.getTamanio());

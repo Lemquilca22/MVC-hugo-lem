@@ -19,7 +19,14 @@ public class ComidaControlador {
         String tamanio = vista.pedirTamanio();
         String bebida = vista.pedirBebida();
         String tamanioBebida= vista.pedirtamioBebida();
+
+//        modelo.setTamanioBebida(nombre);
+//        modelo.setTamanio(tamanio);
+//        modelo.setTamanioBebida(bebida);
+//        modelo.setTamanio(tamanioBebida);
+
         Comida comida = new Comida(nombre,tamanio,bebida,tamanioBebida);
+        comida.setTamanio("XL");
         ComidaVista.mostrarComida(comida);
 
     }
