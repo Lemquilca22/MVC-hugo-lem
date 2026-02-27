@@ -1,5 +1,7 @@
 package Vista;
 
+import Modelo.Persona;
+
 import java.util.Scanner;
 
 public class PersonaVista {
@@ -18,14 +20,10 @@ public class PersonaVista {
         return sc.nextLine();
     }
 
-    public void datosUsuario () {
-        System.out.println("== DATOS DEL USUARIO ==");
-        System.out.println("Nombre completo: " + nombreUsuario());
-        System.out.println("Edad: " + edadUsuario());
-        System.out.println("Contacto: " + correoUsuario());
+    public void mensajeUsuario (String registro) {
+        System.out.println(registro);
     }
 
-    public void mensajeUsuario (String mensaje) {
-        System.out.println(mensaje);
+    public static void mostrarusuario1(Persona usuario1) {
     }
 }

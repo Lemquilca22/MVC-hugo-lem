@@ -7,13 +7,14 @@ public class PersonaControlador {
     private Persona modelo;
     private PersonaVista vista;
 
-    public PersonaControlador(PersonaVista vista, Persona modelo) {
-        this.vista = vista;
+    public PersonaControlador(Persona modelo, PersonaVista vista) {
         this.modelo = modelo;
+        this.vista = vista;
     }
 
     public void menuRegistro () {
         vista.mensajeUsuario("== REGISTRO DE USUARIO ==");
+        vista.nombreUsuario();
 
         String nombre = vista.nombreUsuario();
         int edad = vista.edadUsuario();
@@ -22,6 +23,9 @@ public class PersonaControlador {
         modelo.setNombre(nombre);
         modelo.setEdad(edad);
         modelo.setCorreo(correo);
+
+        Persona usuario1 = new Persona("Hugo González Ortega", 18, "gonzalezhugoortega@gmail.com");
+        PersonaVista.mostrarusuario1(usuario1);
 
     }
 }
