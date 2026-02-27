@@ -1,4 +1,4 @@
-package Restaurante_Mvc;
+package Controlador;
 
 public class Pedido {
     private int numeroPedido;
