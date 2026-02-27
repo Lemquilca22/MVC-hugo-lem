@@ -2,13 +2,15 @@ package Modelo;
 
 public class Comida {
     private String nombre;
-    private String tipo;
-    private int precio;
+    private String tamanio;
+    private String bebida;
+    private String tamanioBebida;
 
-    public Comida(String nombre, String tipo, int precio) {
+    public Comida(String nombre, String tamanio, String bebida, String tamanioBebida) {
         this.nombre = nombre;
-        this.tipo = tipo;
-        this.precio = precio;
+        this.tamanio = tamanio;
+        this.bebida = bebida;
+        this.tamanioBebida = tamanioBebida;
     }
 
     public String getNombre() {
@@ -19,19 +21,27 @@ public class Comida {
         this.nombre = nombre;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getTamanio() {
+        return tamanio;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setTamanio(String tamanio) {
+        this.tamanio = tamanio;
     }
 
-    public int getPrecio() {
-        return precio;
+    public String getBebida() {
+        return bebida;
     }
 
-    public void setPrecio(int precio) {
-        this.precio = precio;
+    public void setBebida(String bebida) {
+        this.bebida = bebida;
+    }
+
+    public String getTamanioBebida() {
+        return tamanioBebida;
+    }
+
+    public void setTamanioBebida(String tamanioBebida) {
+        this.tamanioBebida = tamanioBebida;
     }
 }
