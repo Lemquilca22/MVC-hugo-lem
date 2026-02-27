@@ -1,7 +1,7 @@
 package Controlador;
 
 public class Pedido {
-    private int numeroPedido;
+    private int nueroPedido;
     private Persona persona;
     private Comida comida;
 }
