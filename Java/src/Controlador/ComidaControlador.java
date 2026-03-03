@@ -4,6 +4,7 @@ import Modelo.Comida;
 import Vista.ComidaVista;
 
 public class ComidaControlador {
+
     private Comida modelo;
     private ComidaVista vista;
 
@@ -12,24 +13,40 @@ public class ComidaControlador {
         this.vista = vista;
     }
 
-    public void iniciar(){
-        vista.mostrarMensaje("Registro de comida y bebida");
+    public void iniciar() {
+        vista.mostrarMenu("══════════════════════════════\n" +
+                "         🍔 HAMBURGUESAS      \n" +
+                "══════════════════════════════\n" +
+                "1. Whopper ............... 8.0€\n" +
+                "2. Whopper con Queso ..... 8.5€\n" +
+                "3. Big King .............. 7.5€\n" +
+                "4. Big King XXL .......... 8.5€\n" +
+                "5. Hamburguesa con Queso . 4.0€\n" +
+                "6. Chicken Royale ........ 8.0€\n" +
+                "7. Long Chicken .......... 8.0€\n" +
+                "8. Crispy Chicken ........ 7.5€\n" +
+                "9. Hamburguesa Vegetal ... 8.0€\n" +
+                "══════════════════════════════");
 
-        String nombre = vista.pedirComida();
-        String tamanio = vista.pedirTamanio();
-        String bebida = vista.pedirBebida();
-        String tamanioBebida= vista.pedirtamioBebida();
+        int numHamburguesa = vista.pedirComida();
 
-//        modelo.setTamanioBebida(nombre);
-//        modelo.setTamanio(tamanio);
-//        modelo.setTamanioBebida(bebida);
-//        modelo.setTamanio(tamanioBebida);
+        vista.mostrarBebidas("══════════════════════════════\n" +
+                "           🥤 BEBIDAS         \n" +
+                "══════════════════════════════\n" +
+                "1. Coca-Cola ............. 2.5€\n" +
+                "2. Fanta Naranja ......... 2.5€\n" +
+                "3. Sprite ................ 2.5€\n" +
+                "4. Nestea ................ 2.5€\n" +
+                "5. Agua .................. 2.0€\n" +
+                "6. Cerveza ............... 3.0€\n" +
+                "7. Batido Chocolate ...... 3.5€\n" +
+                "8. Batido Vainilla ....... 3.5€\n" +
+                "9. Batido Fresa .......... 3.5€\n" +
+                "══════════════════════════════");
 
-        Comida comida = new Comida(nombre,tamanio,bebida,tamanioBebida);
-        comida.setTamanio("XL");
+        int numBebida = vista.pedirBebida();
+
+        Comida comida = new Comida(numHamburguesa, numBebida);
         ComidaVista.mostrarComida(comida);
-
     }
-
-
 }

@@ -1,47 +1,57 @@
 package Modelo;
 
 public class Comida {
-    private String nombre;
-    private String tamanio;
-    private String bebida;
-    private String tamanioBebida;
+    private int numeroHamburguesa;
+    private int numeroBebida;
 
-    public Comida(String nombre, String tamanio, String bebida, String tamanioBebida) {
-        this.nombre = nombre;
-        this.tamanio = tamanio;
-        this.bebida = bebida;
-        this.tamanioBebida = tamanioBebida;
+    private static final String[] nombresHamburguesas = {
+            "Whopper", "Whopper con Queso", "Big King", "Big King XXL",
+            "Hamburguesa con Queso", "Chicken Royale", "Long Chicken",
+            "Crispy Chicken", "Hamburguesa Vegetal"
+    };
+
+    private static final String[] nombresBebidas = {
+            "Coca-Cola", "Fanta Naranja", "Sprite", "Nestea", "Agua",
+            "Cerveza", "Batido Chocolate", "Batido Vainilla", "Batido Fresa"
+    };
+
+    private static final double[] preciosHamburguesas = {
+            8.0, 8.50, 7.50, 8.50, 4.0, 8.0, 8.0, 7.50, 8.0
+    };
+
+    private static final double[] preciosBebidas = {
+            2.50, 2.50, 2.50, 2.50, 2.0, 3.0, 3.50, 3.50, 3.50
+    };
+
+    public Comida(int numeroHamburguesa, int numeroBebida) {
+        this.numeroHamburguesa = numeroHamburguesa;
+        this.numeroBebida = numeroBebida;
     }
 
-    public String getNombre() {
-        return nombre;
+
+    public int getNumeroHamburguesa() { return numeroHamburguesa; }
+    public int getNumeroBebida() { return numeroBebida; }
+
+
+    public String getNombreHamburguesa() {
+        return nombresHamburguesas[numeroHamburguesa - 1];
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getNombreBebida() {
+        return nombresBebidas[numeroBebida - 1];
     }
 
-    public String getTamanio() {
-        return tamanio;
+
+    public double getPrecioHamburguesa() {
+        return preciosHamburguesas[numeroHamburguesa - 1];
     }
 
-    public void setTamanio(String tamanio) {
-        this.tamanio = tamanio;
+    public double getPrecioBebida() {
+        return preciosBebidas[numeroBebida - 1];
     }
 
-    public String getBebida() {
-        return bebida;
-    }
-
-    public void setBebida(String bebida) {
-        this.bebida = bebida;
-    }
-
-    public String getTamanioBebida() {
-        return tamanioBebida;
-    }
-
-    public void setTamanioBebida(String tamanioBebida) {
-        this.tamanioBebida = tamanioBebida;
+    // Suma total
+    public double getTotal() {
+        return getPrecioHamburguesa() + getPrecioBebida();
     }
 }
