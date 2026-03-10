@@ -58,25 +58,21 @@ public class Vista {
     public void mostrarBebidas(String bebidas) {
         System.out.println(bebidas);
     }
-    public static void mostrarRecibo(Bebida bebida) {
+    public static void mostrarRecibo(Bebida bebida, Comida c) {
         System.out.println("\n══════════════════════════════");
         System.out.println("        🧾 TU ORDEN           ");
         System.out.println("══════════════════════════════");
-        System.out.println("🥤 Bebida      : " + bebida.getNombreBebida() + " - " + bebida.getPrecioBebida() + "€");
-        System.out.println("──────────────────────────────");
-        System.out.println("💰 TOTAL       : €");
-        System.out.println("══════════════════════════════");
-    }
-    public void mostrarResumen(Comida c) {
-        System.out.println("\n===============================");
-        System.out.println("   ¡ORDEN LISTA: " + c.getNomhamburguesa() + "!");
-        System.out.println("===============================");
+        System.out.println("🍔 Hamburgesa      : " + c.getNomhamburguesa());
         System.out.println("Tamaño: " + c.getTamanioH());
         System.out.println("Pan Superior: " + c.getPanTop());
         System.out.println("Ingrediente 1: " + c.getIngredientes1());
         System.out.println("Carne: " + c.getTipocarne());
         System.out.println("Ingrediente 2: " + c.getIngredientes2());
         System.out.println("Pan Inferior: " + c.getPanbottom1());
-        System.out.println("===============================\n");
+        System.out.println("──────────────────────────────");
+        System.out.println("🥤 Bebida      : " + bebida.getNombreBebida() + " - " + bebida.getPrecioBebida() + "€");
+        System.out.println("──────────────────────────────");
+        System.out.println("💰 TOTAL       : €");
+        System.out.println("══════════════════════════════");
     }
 }
