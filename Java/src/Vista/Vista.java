@@ -55,7 +55,7 @@ public class Vista {
         System.out.println("══════════════════════════════");
         System.out.println("🍔 Hamburguesa : " + comida.getNombreHamburguesa()
                 + " - " + comida.getPrecioHamburguesa() + "€");
-        System.out.println("🥤 Bebida      : " + comida.getNombreBebida()
+        System.out.println("🥤 Bebida      : " + comida.getNombre()
                 + " - " + comida.getPrecioBebida() + "€");
         System.out.println("──────────────────────────────");
         System.out.println("💰 TOTAL       : " + comida.getTotal() + "€");

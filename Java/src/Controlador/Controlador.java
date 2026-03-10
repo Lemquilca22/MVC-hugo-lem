@@ -1,41 +1,12 @@
 package Controlador;
 
 import Modelo.Bebida;
-import Modelo.Comida;
 import Vista.Vista;
 
-public class ComidaControlador {
+public class Controlador {
 
-    private Comida modelo;
     private Bebida modeloBebida;
     private Vista vista;
-
-    public ComidaControlador(Comida modelo, Vista vista) {
-        this.modelo = modelo;
-        this.vista = vista;
-    }
-
-    public void iniciar() {
-        vista.mostrarMenu("══════════════════════════════\n" +
-                "         🍔 HAMBURGUESAS      \n" +
-                "══════════════════════════════\n" +
-                "1. Whopper ............... 8.0€\n" +
-                "2. Whopper con Queso ..... 8.5€\n" +
-                "3. Big King .............. 7.5€\n" +
-                "4. Big King XXL .......... 8.5€\n" +
-                "5. Hamburguesa con Queso . 4.0€\n" +
-                "6. Chicken Royale ........ 8.0€\n" +
-                "7. Long Chicken .......... 8.0€\n" +
-                "8. Crispy Chicken ........ 7.5€\n" +
-                "9. Hamburguesa Vegetal ... 8.0€\n" +
-                "══════════════════════════════");
-
-        int numHamburguesa = vista.pedirComida();
-
-        Comida comida = new Comida(numHamburguesa, numBebida);
-        Vista.mostrarComida(comida);
-
-
 
         String[] bebidas = Bebida.getBebidas();
         double[] precios = Bebida.getPrecios();
