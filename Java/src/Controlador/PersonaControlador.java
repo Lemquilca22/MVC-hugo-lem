@@ -1,13 +1,13 @@
 package Controlador;
 
 import Modelo.Persona;
-import Vista.PersonaVista;
+import Vista.Vista;
 
 public class PersonaControlador {
     private static Persona modelo;
-    private static PersonaVista vista;
+    private static Vista vista;
 
-    public PersonaControlador(Persona modelo, PersonaVista vista) {
+    public PersonaControlador(Persona modelo, Vista vista) {
         this.modelo = modelo;
         this.vista = vista;
     }

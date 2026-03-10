@@ -1,14 +1,14 @@
 package Controlador;
 
 import Modelo.Comida;
-import Vista.ComidaVista;
+import Vista.Vista;
 
 public class ComidaControlador {
 
     private Comida modelo;
-    private ComidaVista vista;
+    private Vista vista;
 
-    public ComidaControlador(Comida modelo, ComidaVista vista) {
+    public ComidaControlador(Comida modelo, Vista vista) {
         this.modelo = modelo;
         this.vista = vista;
     }
@@ -47,6 +47,6 @@ public class ComidaControlador {
         int numBebida = vista.pedirBebida();
 
         Comida comida = new Comida(numHamburguesa, numBebida);
-        ComidaVista.mostrarComida(comida);
+        Vista.mostrarComida(comida);
     }
 }
