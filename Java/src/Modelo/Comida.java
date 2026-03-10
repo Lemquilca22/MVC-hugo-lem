@@ -1,12 +1,14 @@
 package Modelo;
 
-public class Comida extends Producto{
+public class Comida {
     private String[] pan1={"Pan brioche","Pan air","Pan tipo cristal"};
     private String[] ingrediente1={"tomate","lechuga","cebolla"};
     private String[] carne={"ternera", "pollo", "cerdo"};
     private String[] ingrediente2={"queso", "tocino", "huevo"};
     private String[] pan2={"Pan brioche","Pan air","Pan tipo cristal"};
 
+    private String nomhamburguesa;
+    
     private String pantop;
     private String ingredientes1;
     private String tipocarne;
