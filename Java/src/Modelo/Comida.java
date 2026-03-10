@@ -1,6 +1,6 @@
 package Modelo;
 
-public class Comida {
+public class Comida extends Producto{
     private String[] pan1={"Pan brioche","Pan air","Pan tipo cristal"};
     private String[] ingrediente1={"tomate","lechuga","cebolla"};
     private String[] carne={"ternera", "pollo", "cerdo"};
@@ -13,7 +13,8 @@ public class Comida {
     private String ingredientes2;
     private String panbottom;
 
-    public Comida(String pantop, String ingredientes1, String tipocarne, String ingredientes2, String panbottom) {
+    public Comida(String nombre, boolean oferta, int precio, String tamano, String pantop, String ingredientes1, String tipocarne, String ingredientes2, String panbottom) {
+        super(nombre, oferta, precio, tamano);
         this.pantop = pantop;
         this.ingredientes1 = ingredientes1;
         this.tipocarne = tipocarne;
