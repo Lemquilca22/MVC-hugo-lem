@@ -4,25 +4,27 @@ import Modelo.Comida;
 import Vista.ComidaVista;
 
 public class ComidaControlador {
-    private Comida modelo;
-    private ComidaVista vista;
+    private static Comida modelo;
+    private static ComidaVista vista;
 
     public ComidaControlador(Comida modelo, ComidaVista vista) {
         this.modelo = modelo;
         this.vista = vista;
     }
 
-    public void iniciar(){
-        vista.mostrarMensaje("Registro de comida y bebida");
-
-        String nombre = vista.pedirComida();
-        String tamanio = vista.pedirTamanio();
+    public static void menuComidas () {
+        String comida = vista.pedirComida();
         String bebida = vista.pedirBebida();
-        String tamanioBebida= vista.pedirtamioBebida();
-        Comida comida = new Comida(nombre,tamanio,bebida,tamanioBebida);
-        ComidaVista.mostrarComida(comida);
+        String postres = vista.pedirPostres();
 
+        modelo.setComida(comida);
+        modelo.setBebida(bebida);
+        modelo.setPostres(postres);
+
+        vista.mostrarComida(modelo.getComida(), modelo.getBebida(), modelo.getPostres());
     }
 
-
+    public static void iniciar () {
+        menuComidas();
+    }
 }

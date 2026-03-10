@@ -1,47 +1,34 @@
 package Modelo;
 
 public class Comida {
-    private String nombre;
-    private String tamanio;
+    private String comida;
     private String bebida;
-    private String tamanioBebida;
+    private String postres;
 
-    public Comida(String nombre, String tamanio, String bebida, String tamanioBebida) {
-        this.nombre = nombre;
-        this.tamanio = tamanio;
+    public Comida(String comida, String bebida, String postres) {
+        this.comida = comida;
         this.bebida = bebida;
-        this.tamanioBebida = tamanioBebida;
+        this.postres = postres;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getComida() {
+        return comida;
     }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getTamanio() {
-        return tamanio;
-    }
-
-    public void setTamanio(String tamanio) {
-        this.tamanio = tamanio;
+    public void setComida(String nombre) {
+        this.comida = comida;
     }
 
     public String getBebida() {
         return bebida;
     }
-
     public void setBebida(String bebida) {
         this.bebida = bebida;
     }
 
-    public String getTamanioBebida() {
-        return tamanioBebida;
+    public String getPostres() {
+        return postres;
     }
-
-    public void setTamanioBebida(String tamanioBebida) {
-        this.tamanioBebida = tamanioBebida;
+    public void setPostres(String tamanio) {
+        this.postres = postres;
     }
 }
