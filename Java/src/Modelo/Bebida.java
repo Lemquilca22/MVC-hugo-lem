@@ -2,76 +2,26 @@ package Modelo;
 
 public class Bebida {
     private String nombreBebida;
-    private int precioBebida;
+    private double precioBebida;
     private String tamanoBebida;
     private boolean temperaturaBebida;
 
-    public Bebida(String nombre, int precio, String tamano, boolean temperatura) {
+    public Bebida(String nombre, double precio, String tamano, boolean temperatura) {
         this.nombreBebida = nombre;
         this.precioBebida = precio;
         this.tamanoBebida = tamano;
         this.temperaturaBebida = temperatura;
     }
 
-    public static void setBebidas(String[] bebidas) {
-        Bebida.bebidas = bebidas;
-    }
-    public String getNombreBebida() {
-        return nombreBebida;
-    }
+    private static String[] bebidas = {"Coca-Cola", "Fanta", "Sprite", "Nestea", "Agua", "Cerveza"};
+    private static double[] precios = {2.50, 2.50, 2.50, 2.50, 2.00, 3.00};
 
-    public void setNombreBebida(String nombreBebida) {
-        this.nombreBebida = nombreBebida;
-    }
-    public int getPrecioBebida() {
-        return precioBebida;
-    }
+    public static String[] getBebidas() { return bebidas; }
+    public static double[] getPrecios() { return precios; }
+    public static String getNombre(int opcion) { return bebidas[opcion - 1]; }
+    public static double getPrecio(int opcion) { return precios[opcion - 1]; }
 
-    public void setPrecioBebida(int precioBebida) {
-        this.precioBebida = precioBebida;
-    }
-    public static void setPrecios(double[] precios) {
-        Bebida.precios = precios;
-    }
-
-    public String getTamanoBebida() {
-        return tamanoBebida;
-    }
-    public void setTamanoBebida(String tamanoBebida) {
-        this.tamanoBebida = tamanoBebida;
-    }
-
-    public boolean isTemperaturaBebida() {
-        return temperaturaBebida;
-    }
-    public void setTemperaturaBebida(boolean temperaturaBebida) {
-        this.temperaturaBebida = temperaturaBebida;
-    }
-
-    private static String[] bebidas = {
-            "Coca-Cola", "Fanta Naranja", "Sprite",
-            "Nestea", "Agua", "Cerveza",
-            "Batido Chocolate", "Batido Vainilla", "Batido Fresa"
-    };
-
-    private static double[] precios = {
-            2.50, 2.50, 2.50,
-            2.50, 2.00, 3.00,
-            3.50, 3.50, 3.50
-    };
-
-    public static String[] getBebidas() {
-        return bebidas;
-    }
-    public static double[] getPrecios() {
-        return precios;
-    }
-    public static String getNombre(int opcion) {
-        return bebidas[opcion - 1];
-    }
-    public static double getPrecio(int opcion) {
-        return precios[opcion - 1];
-    }
+    public String getNombreBebida() { return nombreBebida; }
+    public double getPrecioBebida() { return precioBebida; }
+    public String getTamanoBebida() { return tamanoBebida; }
 }
-
-

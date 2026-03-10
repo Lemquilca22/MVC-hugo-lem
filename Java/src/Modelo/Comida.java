@@ -36,6 +36,10 @@ public class Comida {
     public String getcarne(int opcion) {
         return carne[opcion];
     }
+    public int cantidadPan() { return pan1.length; }
+    public int cantidadIngredientes() { return ingrediente1.length; }
+    public int cantidadCarnes() { return carne.length; }
+    public int cantidadTamanios() { return tamanio.length; }
 
     public String getNomhamburguesa() {
         return nomhamburguesa;
@@ -43,9 +47,6 @@ public class Comida {
 
     public void setNomhamburguesa(String nomhamburguesa) {
         this.nomhamburguesa = nomhamburguesa;
-    }
-    public int cantidadPan() {
-        return pan1.length;
     }
 
     public String getTamanioH() {
