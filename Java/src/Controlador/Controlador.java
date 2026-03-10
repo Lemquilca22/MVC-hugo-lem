@@ -5,8 +5,10 @@ import Vista.Vista;
 
 public class Controlador {
 
-    private Bebida modeloBebida;
     private Vista vista;
+
+    public Controlador(Vista vista) {
+        this.vista = vista;
 
         String[] bebidas = Bebida.getBebidas();
         double[] precios = Bebida.getPrecios();
@@ -25,14 +27,15 @@ public class Controlador {
                 "9. Batido Fresa .......... 3.5€\n" +
                 "══════════════════════════════");
 
-        for (int i = 1; i < bebidas.length(); i++) {
-            System.out.println(i + ". " + bebidas.getBebida(i) + " - " + bebidas.getPrecioBebida(i) + "€");
+        for (int i = 1; i < bebidas.length; i++) {
+            System.out.println(i + ". " + bebidas[i] + " - " + precios[i] + "€");
 
-        int numBebida = vista.pedirBebida();
+            int numBebida = vista.pedirBebida();
 
             String nombreBebida = Bebida.getNombre(numBebida);
             double precioBebida = Bebida.getPrecio(numBebida);
 
 
+        }
     }
 }

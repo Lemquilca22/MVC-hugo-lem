@@ -2,6 +2,7 @@ package Vista;
 
 import Modelo.Comida;
 import Modelo.Persona;
+import Modelo.Bebida;
 
 import java.util.Scanner;
 
@@ -33,12 +34,9 @@ public class Vista {
         System.out.println(mostrarMensaje);
     }
 
-
-    private Scanner scanner = new Scanner(System.in);
-
     public int pedirBebida() {
         System.out.print("Ingresa el número de la bebida que deseas beber: ");
-        return scanner.nextInt();
+        return sc.nextInt();
     }
 
     public void mostrarMenu(String menu) {
@@ -48,17 +46,13 @@ public class Vista {
     public void mostrarBebidas(String bebidas) {
         System.out.println(bebidas);
     }
-
-    public static void mostrarComida(Comida comida) {
+    public static void mostrarRecibo(Bebida bebida) {
         System.out.println("\n══════════════════════════════");
         System.out.println("        🧾 TU ORDEN           ");
         System.out.println("══════════════════════════════");
-        System.out.println("🍔 Hamburguesa : " + comida.getNombreHamburguesa()
-                + " - " + comida.getPrecioHamburguesa() + "€");
-        System.out.println("🥤 Bebida      : " + comida.getNombre()
-                + " - " + comida.getPrecioBebida() + "€");
+        System.out.println("🥤 Bebida      : " + bebida.getNombreBebida() + " - " + bebida.getPrecioBebida() + "€");
         System.out.println("──────────────────────────────");
-        System.out.println("💰 TOTAL       : " + comida.getTotal() + "€");
+        System.out.println("💰 TOTAL       : €");
         System.out.println("══════════════════════════════");
     }
 }

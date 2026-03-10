@@ -1,27 +1,60 @@
 package Modelo;
 
-public class Bebida extends Producto {
-    private boolean temperatura;
+public class Bebida {
+    private String nombreBebida;
+    private int precioBebida;
+    private String tamanoBebida;
+    private boolean temperaturaBebida;
 
-    public Bebida(String nombre, boolean oferta, int precio, String tamano, boolean temperatura) {
-        super(nombre, oferta, precio, tamano);
-        this.temperatura = temperatura;
+    public Bebida(String nombre, int precio, String tamano, boolean temperatura) {
+        this.nombreBebida = nombre;
+        this.precioBebida = precio;
+        this.tamanoBebida = tamano;
+        this.temperaturaBebida = temperatura;
     }
 
-    public boolean isTemperatura() {
-        return temperatura;
+    public static void setBebidas(String[] bebidas) {
+        Bebida.bebidas = bebidas;
     }
-    public void setTemperatura(boolean temperatura) {
-        this.temperatura = temperatura;
+    public String getNombreBebida() {
+        return nombreBebida;
     }
 
-    private String[] bebidas = {
+    public void setNombreBebida(String nombreBebida) {
+        this.nombreBebida = nombreBebida;
+    }
+    public int getPrecioBebida() {
+        return precioBebida;
+    }
+
+    public void setPrecioBebida(int precioBebida) {
+        this.precioBebida = precioBebida;
+    }
+    public static void setPrecios(double[] precios) {
+        Bebida.precios = precios;
+    }
+
+    public String getTamanoBebida() {
+        return tamanoBebida;
+    }
+    public void setTamanoBebida(String tamanoBebida) {
+        this.tamanoBebida = tamanoBebida;
+    }
+
+    public boolean isTemperaturaBebida() {
+        return temperaturaBebida;
+    }
+    public void setTemperaturaBebida(boolean temperaturaBebida) {
+        this.temperaturaBebida = temperaturaBebida;
+    }
+
+    private static String[] bebidas = {
             "Coca-Cola", "Fanta Naranja", "Sprite",
             "Nestea", "Agua", "Cerveza",
             "Batido Chocolate", "Batido Vainilla", "Batido Fresa"
     };
 
-    private double[] precios = {
+    private static double[] precios = {
             2.50, 2.50, 2.50,
             2.50, 2.00, 3.00,
             3.50, 3.50, 3.50
@@ -30,15 +63,12 @@ public class Bebida extends Producto {
     public static String[] getBebidas() {
         return bebidas;
     }
-
     public static double[] getPrecios() {
         return precios;
     }
-
     public static String getNombre(int opcion) {
         return bebidas[opcion - 1];
     }
-
     public static double getPrecio(int opcion) {
         return precios[opcion - 1];
     }
