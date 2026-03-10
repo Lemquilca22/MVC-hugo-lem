@@ -36,13 +36,8 @@ public class Vista {
 
     private Scanner scanner = new Scanner(System.in);
 
-    public int pedirComida() {
-        System.out.print("Introduce el número de la Hamburguesa: ");
-        return scanner.nextInt();
-    }
-
     public int pedirBebida() {
-        System.out.print("Ingresa el número de la gaseosa que deseas beber: ");
+        System.out.print("Ingresa el número de la bebida que deseas beber: ");
         return scanner.nextInt();
     }
 
