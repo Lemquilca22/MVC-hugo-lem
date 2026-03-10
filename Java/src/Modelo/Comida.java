@@ -8,20 +8,20 @@ public class Comida {
 
     private String nomhamburguesa;
     private String tamanioH;
-    private String pantop;
+    private String panbottom1;
     private String ingredientes1;
     private String tipocarne;
     private String ingredientes2;
-    private String panbottom;
+    private String panTop;
 
     public Comida(String nomhamburguesa, String tamanioH, String pantop, String ingredientes1, String tipocarne, String ingredientes2, String panbottom) {
         this.nomhamburguesa = nomhamburguesa;
         this.tamanioH = tamanioH;
-        this.pantop = pantop;
+        this.panbottom1 = pantop;
         this.ingredientes1 = ingredientes1;
         this.tipocarne = tipocarne;
         this.ingredientes2 = ingredientes2;
-        this.panbottom = panbottom;
+        this.panTop = panbottom;
     }
 
     public String getPan(int opcion) {
@@ -44,6 +44,9 @@ public class Comida {
     public void setNomhamburguesa(String nomhamburguesa) {
         this.nomhamburguesa = nomhamburguesa;
     }
+    public int cantidadPan() {
+        return pan1.length;
+    }
 
     public String getTamanioH() {
         return tamanioH;
@@ -53,12 +56,12 @@ public class Comida {
         this.tamanioH = tamanioH;
     }
 
-    public String getPantop() {
-        return pantop;
+    public String getPanbottom1() {
+        return panbottom1;
     }
 
-    public void setPantop(String pantop) {
-        this.pantop = pantop;
+    public void setPanbottom1(String panbottom1) {
+        this.panbottom1 = panbottom1;
     }
 
     public String getIngredientes1() {
@@ -85,11 +88,11 @@ public class Comida {
         this.ingredientes2 = ingredientes2;
     }
 
-    public String getPanbottom() {
-        return panbottom;
+    public String getPanTop() {
+        return panTop;
     }
 
-    public void setPanbottom(String panbottom) {
-        this.panbottom = panbottom;
+    public void setPanTop(String panTop) {
+        this.panTop = panTop;
     }
 }
