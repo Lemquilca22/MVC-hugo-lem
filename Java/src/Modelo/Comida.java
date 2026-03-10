@@ -2,26 +2,55 @@ package Modelo;
 
 public class Comida {
     private String[] pan1={"Pan brioche","Pan air","Pan tipo cristal"};
-    private String[] ingrediente1={"tomate","lechuga","cebolla"};
+    private String[] tamanio={"pequeña","mediana","grande"};
+    private String[] ingrediente1={"tomate","lechuga","cebolla","queso", "tocino", "huevo"};
     private String[] carne={"ternera", "pollo", "cerdo"};
-    private String[] ingrediente2={"queso", "tocino", "huevo"};
-    private String[] pan2={"Pan brioche","Pan air","Pan tipo cristal"};
 
     private String nomhamburguesa;
-    
+    private String tamanioH;
     private String pantop;
     private String ingredientes1;
     private String tipocarne;
     private String ingredientes2;
     private String panbottom;
 
-    public Comida(String nombre, boolean oferta, int precio, String tamano, String pantop, String ingredientes1, String tipocarne, String ingredientes2, String panbottom) {
-        super(nombre, oferta, precio, tamano);
+    public Comida(String nomhamburguesa, String tamanioH, String pantop, String ingredientes1, String tipocarne, String ingredientes2, String panbottom) {
+        this.nomhamburguesa = nomhamburguesa;
+        this.tamanioH = tamanioH;
         this.pantop = pantop;
         this.ingredientes1 = ingredientes1;
         this.tipocarne = tipocarne;
         this.ingredientes2 = ingredientes2;
         this.panbottom = panbottom;
+    }
+
+    public String getPan(int opcion) {
+        return pan1[opcion];
+    }
+    public String gettamanio(int opcion) {
+        return tamanio[opcion];
+    }
+    public String getingrediente(int opcion) {
+        return ingrediente1[opcion];
+    }
+    public String getcarne(int opcion) {
+        return carne[opcion];
+    }
+
+    public String getNomhamburguesa() {
+        return nomhamburguesa;
+    }
+
+    public void setNomhamburguesa(String nomhamburguesa) {
+        this.nomhamburguesa = nomhamburguesa;
+    }
+
+    public String getTamanioH() {
+        return tamanioH;
+    }
+
+    public void setTamanioH(String tamanioH) {
+        this.tamanioH = tamanioH;
     }
 
     public String getPantop() {
