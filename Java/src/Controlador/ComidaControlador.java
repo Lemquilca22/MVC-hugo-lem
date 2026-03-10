@@ -1,11 +1,13 @@
 package Controlador;
 
+import Modelo.Bebida;
 import Modelo.Comida;
 import Vista.Vista;
 
 public class ComidaControlador {
 
     private Comida modelo;
+    private Bebida modeloBebida;
     private Vista vista;
 
     public ComidaControlador(Comida modelo, Vista vista) {
@@ -30,6 +32,14 @@ public class ComidaControlador {
 
         int numHamburguesa = vista.pedirComida();
 
+        Comida comida = new Comida(numHamburguesa, numBebida);
+        Vista.mostrarComida(comida);
+
+
+
+        String[] bebidas = Bebida.getBebidas();
+        double[] precios = Bebida.getPrecios();
+
         vista.mostrarBebidas("══════════════════════════════\n" +
                 "           🥤 BEBIDAS         \n" +
                 "══════════════════════════════\n" +
@@ -44,9 +54,14 @@ public class ComidaControlador {
                 "9. Batido Fresa .......... 3.5€\n" +
                 "══════════════════════════════");
 
+        for (int i = 1; i < bebidas.length(); i++) {
+            System.out.println(i + ". " + bebidas.getBebida(i) + " - " + bebidas.getPrecioBebida(i) + "€");
+
         int numBebida = vista.pedirBebida();
 
-        Comida comida = new Comida(numHamburguesa, numBebida);
-        Vista.mostrarComida(comida);
+            String nombreBebida = Bebida.getNombre(numBebida);
+            double precioBebida = Bebida.getPrecio(numBebida);
+
+
     }
 }
