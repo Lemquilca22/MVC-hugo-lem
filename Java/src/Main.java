@@ -12,17 +12,17 @@ public class Main {
         ComidaControlador controlador= new ComidaControlador(modelo, vista);
         controlador.iniciar();
 
-        //USUARIOS
-        Persona modelo = new Persona("", 0, "");
-        PersonaVista vista = new PersonaVista();
-        PersonaControlador controlador = new PersonaControlador(modelo, vista);
-        controlador.iniciar();
-
         //PEDIDOS
-        Comida modelo1 = new Comida("", "", "");
+        Comida modelo1 = new Comida(2, 3);
         ComidaVista vista1 = new ComidaVista();
         ComidaControlador controlador1 = new ComidaControlador(modelo1, vista1);
         controlador1.iniciar();
+
+        //USUARIOS
+        Persona modelo2 = new Persona("", 0, "");
+        PersonaVista vista2 = new PersonaVista();
+        PersonaControlador controlador2 = new PersonaControlador(modelo2, vista2);
+        controlador.iniciar();
 
     }
 }
